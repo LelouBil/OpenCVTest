@@ -7,8 +7,8 @@ minmatches = 10
 
 
 def try_image(debug, template, source):
-    # Detect features for template and source
-    detector: cv2.xfeatures2d.DAISY_NRM_SIFT = cv2.xfeatures2d.SIFT_create()
+    # Detect features for template and sour
+    detector: cv2.SIFT = cv2.SIFT_create()
     kp1, dsc1 = detector.detectAndCompute(template, None)
     kp2, dsc2 = detector.detectAndCompute(source, None)
 
